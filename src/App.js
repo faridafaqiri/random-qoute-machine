@@ -17,14 +17,15 @@ function App() {
       }
       const data = await response.json();
       const randomIndex = Math.floor(Math.random() * data.quotes.length);
-      setQuote(data.quotes[randomIndex].quote);
-      setAuthor(data.quotes[randomIndex].author);
+      const { quote, author } = data.quotes[randomIndex];
+      setQuote(quote);
+      setAuthor(author);
 
       const colors = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', '#C75B7A', '#0C1844', '#803D3B'];
       setBackgroundColor(colors[Math.floor(Math.random() * colors.length)]);
     } catch (error) {
       setError('Failed to fetch quote. Please try again later.');
-      console.error('Fetch error:', error);
+      console.error('Fetch error:', error); // eslint-disable-line no-console
     }
   };
 
@@ -33,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App" style={{ backgroundColor: backgroundColor }}>
+    <div className="App" style={{ backgroundColor }}>
       <div id="quote-box" className="quote-box">
         {error ? (
           <div id="error-message" className="error-message">
@@ -47,7 +48,13 @@ function App() {
             <div id="author" className="author">
               <p>- {author}</p>
             </div>
-            <button id="new-quote" className="new-quote" onClick={fetchQuote} style={{ backgroundColor: backgroundColor }}>
+            <button
+              id="new-quote"
+              className="new-quote"
+              onClick={fetchQuote}
+              style={{ backgroundColor }}
+              type="button" // Added type attribute
+            >
               New Quote
             </button>
             <div id="tweet-quote" className="tweet-quote">
@@ -56,7 +63,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="twitter-link"
-                style={{ backgroundColor: backgroundColor }}
+                style={{ backgroundColor }}
               >
                 <FontAwesomeIcon icon={faTwitter} className="twitter-icon" />
               </a>

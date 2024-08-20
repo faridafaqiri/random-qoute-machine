@@ -40,12 +40,12 @@ body {
 
 a {
   display: inline-flex;
-  align-Items: center; 
+  align-items: center; 
   color: #fff;
   padding: 1rem;
-  border-Radius: 5px; 
-  text-Decoration: none;
-  background-color: ;
+  border-radius: 5px; 
+  text-decoration: none;
+  background-color: inherit; /* Fixed missing background-color */
 }
 
 .App {
