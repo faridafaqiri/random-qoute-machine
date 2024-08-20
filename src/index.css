@@ -1,11 +1,11 @@
 body {
   margin: 0;
   font-family:
-  -apple-system,
-  BlinkMacSystemFont,
-  'Segoe UI',
-  'Roboto',
-  'Oxygen',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
     'Ubuntu',
     'Cantarell',
     'Fira Sans',
@@ -13,12 +13,17 @@ body {
     'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing:
-  antialiased;
+   antialiased;
   -moz-osx-font-smoothing:
-  grayscale;
+   grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
 }
