@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#quote-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+}
+
+#text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+#author {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#new-quote {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#tweet-quote {
+  display: inline-block;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+a {
+  display: inline-flex;
+  align-Items: center; 
+  color: #fff;
+  padding: 1rem;
+  border-Radius: 5px; 
+  text-Decoration: none;
+  background-color: ;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-box {
+  color: inherit;
+}
+
+.error-message {
+  color: red;
+}
+
+.text {
+  margin-bottom: 1rem;
+}
+
+.author {
+  margin-bottom: 1rem;
+}
+
+.new-quote {
+  background-color: inherit;
+  border: none;
+  color: #fff;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-quote:hover {
+  opacity: 0.8;
+}
+
+.tweet-quote {
+  margin-top: 1rem;
+}
+
+.twitter-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: inherit;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.twitter-icon {
+  margin-right: 0.5rem;
+}
+
+.twitter-link:hover {
+  opacity: 0.8;
+}
