@@ -46,14 +46,18 @@ function App() {
               <p>{quote}</p>
             </div>
             <div id="author" className="author">
-              <p>- {author}</p>
+              <p>
+                -
+                <br />
+                {author}
+              </p>
             </div>
             <button
               id="new-quote"
               className="new-quote"
               onClick={fetchQuote}
               style={{ backgroundColor }}
-              type="button" // Added type attribute
+              type="button"
             >
               New Quote
             </button>
