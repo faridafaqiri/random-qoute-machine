@@ -1,65 +1,96 @@
-# React and Redux
+# Random Quote Machine 🎯
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
+A dynamic and responsive React application that generates random quotes, changes background colors, and allows users to share quotes on Twitter. The project emphasizes clean code, error handling, and the use of external CSS for styling.
 
-## Set-up GitHub Actions
+## Table of Contents 📚
 
-This GitHub Action is going to run [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/) to help you find style issues.
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Styling](#styling)
+- [Contributing](#contributing)
+- [Author](#author)
 
-[Stylelint](https://stylelint.io/) is a linter for your stylesheets that helps you avoid errors and enforce conventions.
+## Demo 🚀
 
-[ESLint](https://eslint.org/) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
+Check out the live demo [here](./Capture.JPG). 
 
-Please do the following **steps in this order**:
+## Features ✨
 
-1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
-    - **Remember** to use the file linked above
-    - **Remember** that `.github` folder starts with a dot.
-2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-3. When you open your first pull request you should see the result of the GitHub Actions:
+- **Random Quote Generation:** Fetches a random quote from an external API.
+- **Dynamic Styling:** Changes the background color each time a new quote is generated.
+- **Error Handling:** Displays a user-friendly error message if the quote fetching fails.
+- **Social Sharing:** Easily share quotes on Twitter with pre-filled content.
+- **Responsive Design:** Ensures the application looks great on all screen sizes.
 
-![gh actions checks](../assets/images/gh-actions-eslint-stylelint-checks.png)
+## Technologies Used 🛠️
 
-Click on the `Details` link to see the full output and the errors that need to be fixed:
+- **React:** A JavaScript library for building user interfaces.
+- **FontAwesome:** Icon library used for social media buttons.
+- **CSS:** Custom styling to enhance the user interface.
+- **JavaScript Fetch API:** For fetching quotes from an external source.
 
-![gh actions failing checks](../assets/images/gh-actions-html-css-failing-checks.png)
+## Installation 💻
 
-## Set-up linters in your local env
+Follow these steps to set up the project locally:
 
-### ESLint
+1. **Clone the repository:**
 
-1. Run 
-    ```
-    npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x  @babel/preset-react@7.x @babel/preset-react@7.x
-    ```
-    *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
-2. Copy [.eslintrc.json](./.eslintrc.json) and [.babelrc](./.babelrc) to the root directory of your project.
-3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run `npx eslint "**/*.{js,jsx}"` on the root of your directory of your project.
-5. Fix linter errors.
-6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Eslint](https://eslint.org/docs/latest/user-guide/command-line-interface#fixing-problems) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+   ```bash
+   git clone https://github.com/yourusername/random-quote-machine.git
 
-### Stylelint
+2. **Navigate to the project directory:**
+   cd random-quote-machine
 
-1. Run
+3. **Install the dependencies:**
+   npm install
 
-   ```
-   npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-   ```
+## Usage 🚴‍♂️
 
-   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
+  To start the application:
 
-2. Copy [.stylelintrc.json](./.stylelintrc.json) to the root directory of your project.
-3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-4. Run `npx stylelint "**/*.{css,scss}"` on the root of your directory of your project.
-5. Fix linter errors.
-6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Stylelint](https://stylelint.io/user-guide/usage/options) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+1. Run the development server:
+   npm start
+2. Open your browser:
+   Visit <http://localhost:3000> to see the app in action.
 
-## Test/Deployment Actions
+## Project Structure 🗂️
 
-Feel free to add your own deployment actions which can run your tests and deploy to Heroku.
+random-quote-machine/
+├── public/
+│   └── index.html         # Main HTML file
+├── src/
+│   ├── App.css            # Component-specific styles
+│   ├── App.js             # Main React component
+│   ├── index.js           # React entry point
+│   ├── components/        # Directory for additional components (if any)
+│   └── ...
+├── .eslintrc.json         # ESLint configuration
+├── package.json           # Project dependencies and scripts
+└── README.md              # Project documentation
 
-Make sure that you do not modify the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) but that you create a separe GitHub Action workflow file for that.
+## Styling 🎨
+
+  External CSS: All styles are separated into App.css for easy maintenance and scalability.
+  Responsive Design: The layout adapts to different screen sizes, ensuring usability on both mobile and desktop devices.
+  Hover Effects: Interactive elements like buttons have hover states for better user feedback.
+
+## Contributing 🤝
+
+Contributions are welcome! Please follow these steps to contribute:
+  Fork the repository.
+  Create a new branch (git checkout -b feature-branch).
+  Make your changes.
+  Commit your changes (git commit -m 'Add some feature').
+  Push to the branch (git push origin feature-branch).
+ Open a pull request.
+
+## Author 👩‍💻
+
+You can contact me through the following:
+
+- LinkedIn: (<https://www.linkedin.com/in/farida-faqiri-071a31309/>)
+- Email: (<farida.faqiri2@gmail.com>)
