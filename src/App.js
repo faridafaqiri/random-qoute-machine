@@ -58,6 +58,7 @@ function App() {
               onClick={fetchQuote}
               style={{ backgroundColor }}
               type="button"
+              aria-label="Generate new quote" // Added aria-label
             >
               New Quote
             </button>
@@ -68,6 +69,7 @@ function App() {
                 rel="noopener noreferrer"
                 className="twitter-link"
                 style={{ backgroundColor }}
+                aria-label="Tweet this quote" // Added aria-label
               >
                 <FontAwesomeIcon icon={faTwitter} className="twitter-icon" />
               </a>
