@@ -58,22 +58,21 @@ function App() {
               onClick={fetchQuote}
               style={{ backgroundColor }}
               type="button"
-              aria-label="Generate new quote" // Added aria-label
+              aria-label="Generate new quote"
             >
               New Quote
             </button>
-            <div id="tweet-quote" className="tweet-quote">
-              <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${quote}" - ${author}`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="twitter-link"
-                style={{ backgroundColor }}
-                aria-label="Tweet this quote" // Added aria-label
-              >
-                <FontAwesomeIcon icon={faTwitter} className="twitter-icon" />
-              </a>
-            </div>
+            <a
+              id="tweet-quote"
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${quote}" - ${author}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="twitter-link"
+              style={{ backgroundColor }}
+              aria-label="Tweet this quote"
+            >
+              <FontAwesomeIcon icon={faTwitter} className="twitter-icon" />
+            </a>
           </>
         )}
       </div>
