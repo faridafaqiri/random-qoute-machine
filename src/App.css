@@ -46,7 +46,7 @@ a {
   padding: 1rem;
   border-radius: 5px;
   text-decoration: none;
-  background-color: inherit; /* Fixed missing background-color */
+  background-color: inherit;
 }
 
 .App {
