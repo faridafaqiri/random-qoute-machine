@@ -5,6 +5,7 @@ A dynamic and responsive React application that generates random quotes, changes
 ## Table of Contents 📚
 
 - [Demo](#demo)
+- [Live Link](#live)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
@@ -17,6 +18,10 @@ A dynamic and responsive React application that generates random quotes, changes
 ## Demo 🚀
 
 Check out the live demo [here](./Capture.JPG). 
+
+## Live Link 
+
+https://leafy-hummingbird-c40cd5.netlify.app
 
 ## Features ✨
 
